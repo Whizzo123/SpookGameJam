@@ -11,3 +11,8 @@ Engine Conventions:-
 
 1. Ordering in the hierarchy
 2. Put stuff in folders based on purpose
+
+Fix layout crash:-
+
+1. Delete current layout under Library folder in SpookGameJam project folder
+2. Create an empty project and copy its current layout to the SpookGameJam\Library folder and this should fix it
