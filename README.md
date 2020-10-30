@@ -14,5 +14,7 @@ Engine Conventions:-
 
 Fix layout crash:-
 
-1. Delete current layout under Library folder in SpookGameJam project folder
-2. Create an empty project and copy its current layout to the SpookGameJam\Library folder and this should fix it
+1. Delete current layout under Library folder in "...SpookGameJam\Library\CurrentLayout-default.dwlt"
+2. Create another empty project in unity then close it
+3. Go into that empty projects library folder and copy its current layout tile (NewUnityProject\Library\CurrentLayout-default.dwlt)
+4. Paste this file back into SpookGameJam\Library folder then restart unity and the issue should be fixed
