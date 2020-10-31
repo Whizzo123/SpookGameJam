@@ -14,7 +14,8 @@ public class BlessedSunCannonProjectile : MonoBehaviour
     {
         target = _target;
         Vector3 dir = target.transform.position - transform.position;
-        setPos = dir;
+        Debug.Log("Seeking at: " + target.transform.position);
+        setPos = target.transform.position;
         FireCannonAtPoint(dir);
     }
 
@@ -29,17 +30,15 @@ public class BlessedSunCannonProjectile : MonoBehaviour
 
 
         Vector3 dir = setPos - transform.position;
-        projectileSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.sqrMagnitude * 3;
-        float distanceThisFrame = projectileSpeed * Time.deltaTime;
 
-        if (dir.magnitude <= distanceThisFrame)
+        projectileSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+        float distanceThisFrame = projectileSpeed * Time.deltaTime;
+        if (dir.magnitude <= distanceThisFrame + .6f)
         {
+            Debug.Log("HITFUNCTIONISCALLED");
             HitTarget();
             return;
         }
-        
-        
-        Debug.Log("Update");
     }
 
     void HitTarget()
@@ -72,11 +71,6 @@ public class BlessedSunCannonProjectile : MonoBehaviour
         Destroy(effectIns, 2);
         Destroy(this.gameObject);
         Debug.Log("Hit");
-    }
-
-    void UpdateTarget()
-    {
-
     }
 
     private void FireCannonAtPoint(Vector3 point)

@@ -25,9 +25,14 @@ public class FistOfJusticeProjectile : MonoBehaviour
 
         Vector3 dir = target.transform.position - transform.position;//Vector 3 from ball to target
         float distanceThisFrame = projectileSpeed * Time.deltaTime;
-        
+
+
+        Debug.Log(transform.position + "Our Position");
+        Debug.Log(target.transform.position + "Target position");
+        Debug.Log(dir + "vector direction");
+        Debug.Log(distanceThisFrame + "DistanceThisFrame");
         //If magnitude of vector 3 is smaller than the estimated time to reach ball, call hit and don't move
-        if(dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
             return;
