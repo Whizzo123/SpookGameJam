@@ -12,11 +12,12 @@ public class Navigate : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(targetPos.transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(targetPos.transform.position);
+        
     }
 }
