@@ -303,6 +303,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 36.375, y: 0, z: 0}
+--- !u!1 &179433278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6372205387089627133, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
+  m_PrefabInstance: {fileID: 1667711954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &219742731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3883797614733191844, guid: 11390ebeb0c545240a8a2054126bfc95, type: 3}
       propertyPath: towerRate
-      value: 0.29
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883797614733191844, guid: 11390ebeb0c545240a8a2054126bfc95, type: 3}
+      propertyPath: towerRange
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11390ebeb0c545240a8a2054126bfc95, type: 3}
@@ -1533,6 +1542,7 @@ MonoBehaviour:
   targetGate: {fileID: 1680351000}
   enemiesInWave: []
   hellSpawnGameObject: {fileID: 464462231}
+  hellGate: {fileID: 179433278}
 --- !u!4 &1536819824
 Transform:
   m_ObjectHideFlags: 0

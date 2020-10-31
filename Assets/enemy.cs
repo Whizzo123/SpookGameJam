@@ -11,6 +11,8 @@ public class enemy : MonoBehaviour
 
     public float enemyHealth;
 
+    private float originalEnemyHealth;
+
     public int enemyDamage;
 
     public bool flying;
@@ -24,6 +26,7 @@ public class enemy : MonoBehaviour
         GetComponent<NavMeshAgent>().speed = enemySpeed;
         flying = false;
         inHell = false;
+        originalEnemyHealth = enemyHealth;
     }
 
     public void SetSpeed(float enemySpeedChange)
@@ -43,8 +46,10 @@ public class enemy : MonoBehaviour
             }
             else
             {
-                //this is a reminder for joe to link up his nav mesh here.
                 GetComponent<NavMeshAgent>().Warp(hellSpawnLocation.transform.position);
+                GetComponent<NavMeshAgent>().SetDestination(GetComponent<Navigate>().hellGateTargetPos.transform.position);
+                enemyHealth = originalEnemyHealth;
+                inHell = true;
             }
         }
             
