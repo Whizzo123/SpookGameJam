@@ -23,11 +23,14 @@ public class enemy : MonoBehaviour
 
     public float creditsOnDeath;
 
+    public bool haveHolyWaterModifierApplied;
+
     void Start()
     {
         GetComponent<NavMeshAgent>().speed = enemySpeed;
         flying = false;
         inHell = false;
+        haveHolyWaterModifierApplied = false;
         originalEnemyHealth = enemyHealth;
     }
 
@@ -38,6 +41,10 @@ public class enemy : MonoBehaviour
    
     public void SetHealth(float enemyHealthChange)
     {
+        if(haveHolyWaterModifierApplied)
+        {
+            enemyHealthChange *= 2;
+        }
         enemyHealth = enemyHealth + enemyHealthChange;
         if(enemyHealth <= 0)
         {
