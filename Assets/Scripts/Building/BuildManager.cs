@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,10 +10,30 @@ public class BuildManager : MonoBehaviour
     public GameObject chosenTowerGOToBuild;
     public BuildPlot plotChosen;
     public Dictionary<string, GameObject> towerPrefabRegistry;
+    public Dictionary<string, float> towerNameToTowerCost;
+    public TextMeshProUGUI playerMoneyText;
+    private float playerMoney;
+    private float PlayerMoney 
+    { 
+        get 
+        {
+            return playerMoney;
+        } 
+        set 
+        { 
+            if (playerMoneyText != null) 
+            {
+                playerMoney = value;
+                playerMoneyText.text = (playerMoney + " credits"); 
+            } 
+        } 
+    }
 
     void Start()
     {
+        PlayerMoney = 10f;
         towerPrefabRegistry = new Dictionary<string, GameObject>();
+        towerNameToTowerCost = new Dictionary<string, float>();
         LoadTowerPrefabsFromFolder();
     }
 
@@ -22,6 +43,7 @@ public class BuildManager : MonoBehaviour
         for (int i = 0; i < towers.Length; i++)
         {
             towerPrefabRegistry[towers[i].name] = towers[i];
+            towerNameToTowerCost[towers[i].name] = 5f;
         }
     }
 
@@ -58,9 +80,10 @@ public class BuildManager : MonoBehaviour
     {
         if (plotChosen != null)
         {
-            if (plotChosen.blocked == false && plotChosen.builtGO == null)
+            if (plotChosen.PlotBlocked == false && plotChosen.builtGO == null && PlayerMoney >= towerNameToTowerCost[towerName])
             {
                 plotChosen.BuildOn(towerPrefabRegistry[towerName]);
+                PlayerMoney -= towerNameToTowerCost[towerName];
             }
             plotChosen.ClickedOff();
         }
@@ -72,9 +95,13 @@ public class BuildManager : MonoBehaviour
     {
         if (plotChosen != null)
         {
-            plotChosen.RemoveTower();
+            if (plotChosen.builtGO != null)
+            {
+                PlayerMoney += towerNameToTowerCost[plotChosen.builtGOPrefabName];
+                plotChosen.RemoveTower();
+            }
             plotChosen.ClickedOff();
-        }
+        }   
         plotChosen = null;
     }
 
