@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
             waveText.text = "Wave: " + waveNumber;
         }
     }
-    public WaveTemplate[] waveTemplates;
+    public WaveTemplate[] waves;
     public float spawnCooldown;
     private float spawnCooldownTimer;
     public float patrolCooldown;
@@ -67,14 +67,13 @@ public class Spawner : MonoBehaviour
                 if (spawnCooldownTimer <= 0)
                 {
                     spawnCooldownTimer = spawnCooldown;
-                    WaveTemplate waveTemplate = waveTemplates[waveNumber - 1];
+                    WaveTemplate waveTemplate = waves[waveNumber - 1];
                     if (waveIndex < waveTemplate.patrols.Length)
                     {
                         PatrolTemplate patrol = waveTemplate.patrols[waveIndex];
-                        Debug.Log("WaveTemplate patrols length: " + waveTemplate.patrols.Length);
-                        if (patrolIndex < patrol.members.Length)
+                        if (patrolIndex < patrol.patrolComposition.Length)
                         {
-                            PatrolMember member = patrol.members[patrolIndex];
+                            PatrolMember member = patrol.patrolComposition[patrolIndex];
                             if (memberIndex < member.numberToSpawn)
                             {
                                 SpawnEnemy(member.enemyTemplate);
@@ -101,13 +100,11 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Spawn cooldown timer:  " + spawnCooldownTimer);
                     spawnCooldownTimer -= Time.deltaTime;
                 }
             }
             else
             {
-                Debug.Log("Patrol cooldown timer: " + patrolCooldownTimer);
                 patrolCooldownTimer -= Time.deltaTime;
             }
         }
@@ -150,7 +147,7 @@ public class Spawner : MonoBehaviour
 
 public struct PatrolTemplate
 {
-    public PatrolMember[] members;
+    public PatrolMember[] patrolComposition;
 }
 [System.Serializable]
 public struct PatrolMember
