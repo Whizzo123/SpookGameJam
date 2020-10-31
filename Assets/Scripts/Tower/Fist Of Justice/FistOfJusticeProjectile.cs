@@ -6,7 +6,7 @@ public class FistOfJusticeProjectile : MonoBehaviour
 {
 
     private GameObject target;
-    public float projectileSpeed = 100f;
+    public float projectileSpeed = 30f;
     public GameObject impactEffect;
     public void Seek (GameObject _target)
     {
