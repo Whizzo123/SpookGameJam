@@ -1453,16 +1453,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveText: {fileID: 1726716469}
   waveNumber: 0
-  waveTemplates:
+  waves:
   - patrols:
-    - members:
+    - patrolComposition:
       - enemyTemplate: {fileID: 4769095181067476404, guid: bd728efea7ff6bf4eb4a9574b5ffdf55, type: 3}
         numberToSpawn: 3
-    - members:
+    - patrolComposition:
       - enemyTemplate: {fileID: 4769095181067476404, guid: bd728efea7ff6bf4eb4a9574b5ffdf55, type: 3}
-        numberToSpawn: 5
+        numberToSpawn: 7
   - patrols:
-    - members:
+    - patrolComposition:
       - enemyTemplate: {fileID: 4769095181067476404, guid: bd728efea7ff6bf4eb4a9574b5ffdf55, type: 3}
         numberToSpawn: 6
   spawnCooldown: 0.75
