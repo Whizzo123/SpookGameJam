@@ -43,7 +43,7 @@ public class BuildManager : MonoBehaviour
         for (int i = 0; i < towers.Length; i++)
         {
             towerPrefabRegistry[towers[i].name] = towers[i];
-            towerNameToTowerCost[towers[i].name] = 5f;
+            towerNameToTowerCost[towers[i].name] = towers[i].GetComponent<Tower>().towerCost;
         }
     }
 

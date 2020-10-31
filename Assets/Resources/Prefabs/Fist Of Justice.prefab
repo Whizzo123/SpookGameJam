@@ -334,7 +334,7 @@ MonoBehaviour:
   towerCost: 5
   towerRate: 2
   towerDamage: 4
-  towerRange: 8
+  towerRange: 4
   projectilePrefab: {fileID: 6915407692525114468, guid: bdeeab72700917f488fd0482372dcdda, type: 3}
   projectileSpawnPoint: {fileID: 908562048849947799}
   towerRotate: {fileID: 908562049786267595}
