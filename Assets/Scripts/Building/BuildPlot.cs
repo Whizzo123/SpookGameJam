@@ -53,14 +53,16 @@ public class BuildPlot : MonoBehaviour
     {
         builtGOPrefabName = towerGO.name;
         builtGO = (GameObject)Instantiate(towerGO, buildPosition.transform.position, Quaternion.identity);
-        twinBuildPlot.PlotBlocked = true;
+        if(twinBuildPlot != null)
+            twinBuildPlot.PlotBlocked = true;
     }
 
     public void RemoveTower()
     {
         if (builtGO != null)
         {
-            twinBuildPlot.PlotBlocked = false;
+            if(twinBuildPlot != null)
+                twinBuildPlot.PlotBlocked = false;
             Destroy(builtGO);
             builtGO = null;
         }
