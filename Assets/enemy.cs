@@ -19,7 +19,7 @@ public class enemy : MonoBehaviour
         enemySpeed = enemySpeed + enemySpeedChange;
     }
    
-    public float setHealth(float enemyHealthChange)
+    public void setHealth(float enemyHealthChange)
     {
         enemyHealth = enemyHealth + enemyHealthChange;
         if(enemyHealth <= 0)
@@ -36,11 +36,11 @@ public class enemy : MonoBehaviour
             
     }
 
-    public float toggleFlying()
+    public void toggleFlying()
     {
         if (flying = false)
             flying = true;
         else
-            flying = flase;
+            flying = false;
     }
 }
