@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class enemy : MonoBehaviour
@@ -12,7 +13,14 @@ public class enemy : MonoBehaviour
 
     public bool flying = false;
 
-    public bool inHell = false; 
+    public bool inHell = false;
+
+    public GameObject hellSpawnLocation; 
+
+    void Start()
+    {
+        GetComponent<NavMeshAgent>().speed = enemySpeed;
+    }
 
     public void setSpeed(float enemySpeedChange)
     {
@@ -31,6 +39,7 @@ public class enemy : MonoBehaviour
             else
             {
                 //this is a reminder for joe to link up his nav mesh here.
+                GetComponent<NavMeshAgent>().Warp(hellSpawnLocation.transform.position);
             }
         }
             
