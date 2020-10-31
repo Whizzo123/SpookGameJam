@@ -10,11 +10,12 @@ public class BlessedSunCannonProjectile : MonoBehaviour
     public GameObject impactEffect;
     public Vector3 setPos;
     public float splashRange = 10f;
+    public float damage;
+    public float towerRange;
     public void Seek(GameObject _target)
     {
         target = _target;
         Vector3 dir = target.transform.position - transform.position;
-        Debug.Log("Seeking at: " + target.transform.position);
         setPos = target.transform.position;
         FireCannonAtPoint(dir);
     }
@@ -35,19 +36,16 @@ public class BlessedSunCannonProjectile : MonoBehaviour
         float distanceThisFrame = projectileSpeed * Time.deltaTime;
         if (dir.magnitude <= distanceThisFrame + .6f)
         {
-            Debug.Log("HITFUNCTIONISCALLED");
             HitTarget();
             return;
         }
     }
 
     void HitTarget()
-    {
-
-        
+    { 
         //Gets all enemies
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        float shortestDistance = Mathf.Infinity;
+        float shortestDistance = towerRange;
         List<GameObject> allEnemiesInRange = new List<GameObject>();
 
         //for all enemies, check if they're in range and put their game objects into another array
@@ -57,27 +55,25 @@ public class BlessedSunCannonProjectile : MonoBehaviour
             if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;
-                allEnemiesInRange.Add(enemy.gameObject);//TODO
+                allEnemiesInRange.Add(enemy.gameObject);
             }
         }
+        Debug.Log("Hit Target enemies hit: " + allEnemiesInRange.Count);
         //for all gameobjects in array, call damage function
         for (int p = 0; p < allEnemiesInRange.Count; p++)
         {
-            //allEnemiesInRange[i]; call damage
+            allEnemiesInRange[p].GetComponent<enemy>().SetHealth(-damage);
         }
 
         //Effects and destroy ball
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2);
         Destroy(this.gameObject);
-        Debug.Log("Hit");
     }
 
     private void FireCannonAtPoint(Vector3 point)
     {
         var velocity = BallisticVelocity(point, 70);
-        Debug.Log("Firing at " + point + " velocity " + velocity);
-
         this.gameObject.GetComponent<Rigidbody>().velocity = velocity;
     }
     

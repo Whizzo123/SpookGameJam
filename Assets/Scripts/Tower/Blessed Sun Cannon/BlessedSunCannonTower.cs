@@ -33,7 +33,8 @@ public class BlessedSunCannonTower : Tower
     {
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         BlessedSunCannonProjectile projectile = projectileGO.GetComponent<BlessedSunCannonProjectile>();
-
+        projectile.damage = towerDamage;
+        projectile.towerRange = towerRange;
         if (projectile != null)
         {
             projectile.Seek(target);
