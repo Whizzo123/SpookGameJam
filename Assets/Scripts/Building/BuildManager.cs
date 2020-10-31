@@ -13,7 +13,7 @@ public class BuildManager : MonoBehaviour
     public Dictionary<string, float> towerNameToTowerCost;
     public TextMeshProUGUI playerMoneyText;
     private float playerMoney;
-    private float PlayerMoney 
+    public float PlayerMoney 
     { 
         get 
         {

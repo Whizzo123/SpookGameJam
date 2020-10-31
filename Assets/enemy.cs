@@ -19,7 +19,9 @@ public class enemy : MonoBehaviour
 
     public bool inHell;
 
-    public GameObject hellSpawnLocation; 
+    public GameObject hellSpawnLocation;
+
+    public float creditsOnDeath;
 
     void Start()
     {
@@ -49,6 +51,7 @@ public class enemy : MonoBehaviour
                 GetComponent<NavMeshAgent>().Warp(hellSpawnLocation.transform.position);
                 GetComponent<NavMeshAgent>().SetDestination(GetComponent<Navigate>().hellGateTargetPos.transform.position);
                 enemyHealth = originalEnemyHealth;
+                FindObjectOfType<BuildManager>().PlayerMoney += creditsOnDeath;
                 inHell = true;
             }
         }
