@@ -57,11 +57,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909204092386323798}
   m_LocalRotation: {x: -0, y: -0.9975969, z: 0.069285356, w: 0}
-  m_LocalPosition: {x: 0, y: 0.8043302, z: 0.062341034}
+  m_LocalPosition: {x: 0.02, y: 0.96, z: 0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2909204092831547358}
-  m_Father: {fileID: 2909204092841363416}
+  m_Father: {fileID: 2249824823722809314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 7.946, y: -180, z: 0}
 --- !u!33 &2909204092386323802
@@ -152,9 +152,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909204092831547357}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.602, z: 0.005}
-  m_LocalScale: {x: 0.17674, y: 0.51159, z: 1.5998733}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.602, z: 0.00500001}
+  m_LocalScale: {x: 0.17674002, y: 0.51158994, z: 1.5998734}
   m_Children:
   - {fileID: 2909204091454342667}
   m_Father: {fileID: 2909204092386323799}
@@ -231,10 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2909204092841363416}
-  - component: {fileID: 2909204092841363415}
-  - component: {fileID: 2909204092841363414}
-  - component: {fileID: 2909204092841363413}
-  - component: {fileID: 3883797614733191844}
+  - component: {fileID: 4066609931084254967}
   m_Layer: 0
   m_Name: Blessed Sun Cannon
   m_TagString: Untagged
@@ -250,28 +247,81 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909204092841363412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.76, y: 1.91, z: 0.32986653}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2909204092386323799}
+  - {fileID: 2249824823722809314}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2909204092841363415
+--- !u!114 &4066609931084254967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2909204092841363412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186d4f5f0bdde544f8441e8a90b1e413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerCost: 5
+  towerRate: 0.5
+  towerDamage: 5
+  towerRange: 6
+  projectilePrefab: {fileID: 8801389098057254384, guid: 8e018ec00ede76d4f8c439c26e6f9769, type: 3}
+  projectileSpawnPoint: {fileID: 2909204091454342667}
+  towerRotate: {fileID: 2909204092386323799}
+--- !u!1 &5306976666705785187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2249824823722809314}
+  - component: {fileID: 8846232449067800712}
+  - component: {fileID: 2029469356096473555}
+  - component: {fileID: 8292640717646401711}
+  m_Layer: 0
+  m_Name: TowerBlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2249824823722809314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306976666705785187}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2909204092386323799}
+  m_Father: {fileID: 2909204092841363416}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8846232449067800712
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2909204092841363412}
+  m_GameObject: {fileID: 5306976666705785187}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2909204092841363414
+--- !u!23 &2029469356096473555
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2909204092841363412}
+  m_GameObject: {fileID: 5306976666705785187}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -306,35 +356,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2909204092841363413
+--- !u!65 &8292640717646401711
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2909204092841363412}
+  m_GameObject: {fileID: 5306976666705785187}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3883797614733191844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2909204092841363412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 186d4f5f0bdde544f8441e8a90b1e413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerCost: 5
-  towerRate: 1.16
-  towerDamage: 5
-  towerRange: 10
-  projectilePrefab: {fileID: 8801389098057254384, guid: 8e018ec00ede76d4f8c439c26e6f9769, type: 3}
-  projectileSpawnPoint: {fileID: 2909204091454342667}
-  towerRotate: {fileID: 2909204092386323799}

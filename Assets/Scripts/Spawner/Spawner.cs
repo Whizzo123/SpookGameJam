@@ -33,6 +33,7 @@ public class Spawner : MonoBehaviour
     public GameObject targetGate;
     public List<GameObject> enemiesInWave;
     public GameObject hellSpawnGameObject;
+    public GameObject hellGate;
 
 
     private int waveIndex;
@@ -125,7 +126,8 @@ public class Spawner : MonoBehaviour
     private void SpawnEnemy(GameObject enemyTemplate)
     {
         GameObject go = (GameObject)Instantiate(enemyTemplate, spawnPos.transform.position, Quaternion.identity);
-        go.GetComponent<Navigate>().targetPos = targetGate;
+        go.GetComponent<Navigate>().heavenGateTargetPos = targetGate;
+        go.GetComponent<Navigate>().hellGateTargetPos = hellGate;
         go.GetComponent<enemy>().hellSpawnLocation = hellSpawnGameObject;
         enemiesInWave.Add(go);
         enemyCountInWave++;
