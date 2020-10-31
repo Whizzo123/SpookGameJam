@@ -13,10 +13,23 @@ public class Gate : MonoBehaviour
     {
         if (col.gameObject.GetComponent<NavMeshAgent>())
         {
-            NavMeshAgent agent = col.gameObject.GetComponent<NavMeshAgent>();
-            agent.Warp(spawnLocationOnReachingGate.transform.position);
-            agent.SetDestination(newGateToMoveTowards.transform.position);
+            if (spawnLocationOnReachingGate != null)
+                SendEnemyToNextDimension(col.gameObject);
+            else
+                KillEnemyAndDamagePlayer(col.gameObject);
         }
+    }
+
+    public void SendEnemyToNextDimension(GameObject enemyGO)
+    {
+        NavMeshAgent agent = enemyGO.GetComponent<NavMeshAgent>();
+        agent.Warp(spawnLocationOnReachingGate.transform.position);
+        agent.SetDestination(newGateToMoveTowards.transform.position);
+    }
+
+    public void KillEnemyAndDamagePlayer(GameObject enemyGO)
+    {
+        Destroy(enemyGO);
     }
 
 }
