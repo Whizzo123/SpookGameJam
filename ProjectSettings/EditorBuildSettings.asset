@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NavMeshTest.unity
+    guid: be1050c004e85484c8f666c40d985e74
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 82f24587045d3b2498f9f9fdb4a4c578
   m_configObjects: {}

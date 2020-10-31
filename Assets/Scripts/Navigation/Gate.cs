@@ -29,6 +29,8 @@ public class Gate : MonoBehaviour
 
     public void KillEnemyAndDamagePlayer(GameObject enemyGO)
     {
+        FindObjectOfType<Player>().DecreaseHealth(enemyGO.GetComponent<enemy>().enemyDamage);
+        FindObjectOfType<Spawner>().EnemyHasBeenKilled();
         Destroy(enemyGO);
     }
 
