@@ -8,7 +8,11 @@ public class BuildPlot : MonoBehaviour
     public Material materialToSwitchToWhenSelected;
     public Material defaultMaterial;
     public GameObject buildPosition;
-    private GameObject builtGO;
+    public GameObject builtGO;
+    public bool blocked;
+
+
+
 
     public void ClickedOn()
     {
@@ -20,9 +24,19 @@ public class BuildPlot : MonoBehaviour
         GetComponent<MeshRenderer>().material = defaultMaterial;
     }
 
+
+
     public void BuildOn(GameObject towerGO)
     {
-        builtGO = (GameObject)Instantiate(towerGO, buildPosition.transform.position, Quaternion.identity, this.transform);
+        builtGO = (GameObject)Instantiate(towerGO, buildPosition.transform.position, Quaternion.identity);
     }
 
+    public void RemoveTower()
+    {
+        if (builtGO != null)
+        {
+            Destroy(builtGO);
+            builtGO = null;
+        }
+    }
 }
