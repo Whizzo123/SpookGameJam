@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3883797614733191844, guid: 11390ebeb0c545240a8a2054126bfc95, type: 3}
       propertyPath: towerRate
-      value: 0.1
+      value: 0.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11390ebeb0c545240a8a2054126bfc95, type: 3}

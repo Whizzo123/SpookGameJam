@@ -14,7 +14,7 @@ public class BlessedSunCannonProjectile : MonoBehaviour
     {
         target = _target;
         Vector3 dir = target.transform.position - transform.position;
-        setPos = dir;
+        setPos = target.transform.position;
         FireCannonAtPoint(dir);
     }
 
@@ -31,13 +31,17 @@ public class BlessedSunCannonProjectile : MonoBehaviour
 
         Vector3 dir = setPos - transform.position;
 
-        Debug.Log(dir + "vector direction");
-        Debug.Log(transform.position + "Our Position");
-        Debug.Log(setPos + " target vector");
+
         //Debug.Log(target.transform.position + "Target position");
+        
 
         projectileSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
-        float distanceThisFrame = projectileSpeed * Time.deltaTime;
+        float distanceThisFrame = projectileSpeed * Time.deltaTime * 3;
+
+        Debug.Log(dir.magnitude + "vector direction");
+        Debug.Log(transform.position + "Our Position");
+        Debug.Log(setPos + " target vector");
+        Debug.Log(distanceThisFrame + " distance this frame");
 
         if (dir.magnitude <= distanceThisFrame)
         {
