@@ -24,12 +24,12 @@ public class enemy : MonoBehaviour
         GetComponent<NavMeshAgent>().speed = enemySpeed;
     }
 
-    public void setSpeed(float enemySpeedChange)
+    public void SetSpeed(float enemySpeedChange)
     {
         enemySpeed = enemySpeed + enemySpeedChange;
     }
    
-    public void setHealth(float enemyHealthChange)
+    public void SetHealth(float enemyHealthChange)
     {
         enemyHealth = enemyHealth + enemyHealthChange;
         if(enemyHealth <= 0)
@@ -48,7 +48,7 @@ public class enemy : MonoBehaviour
             
     }
 
-    public void toggleFlying()
+    public void ToggleFlying()
     {
         if (flying = false)
             flying = true;

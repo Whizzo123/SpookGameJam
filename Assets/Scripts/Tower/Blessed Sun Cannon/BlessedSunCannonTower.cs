@@ -14,7 +14,7 @@ public class BlessedSunCannonTower : Tower
         }
 
         //Big brain stuff for rotating tower to look at target
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = lookRotation.eulerAngles;
         towerRotate.rotation = Quaternion.Euler(0f, rotation.y - 180, 0);
@@ -39,4 +39,5 @@ public class BlessedSunCannonTower : Tower
             projectile.Seek(target);
         }
     }
+
 }
