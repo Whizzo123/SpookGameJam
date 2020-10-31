@@ -7,21 +7,23 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
 
-    public float enemySpeed ;
+    public float enemySpeed;
 
-    public float enemyHealth ;
+    public float enemyHealth;
 
     public int enemyDamage;
 
-    public bool flying = false;
+    public bool flying;
 
-    public bool inHell = false;
+    public bool inHell;
 
     public GameObject hellSpawnLocation; 
 
     void Start()
     {
         GetComponent<NavMeshAgent>().speed = enemySpeed;
+        flying = false;
+        inHell = false;
     }
 
     public void setSpeed(float enemySpeedChange)
@@ -50,7 +52,7 @@ public class enemy : MonoBehaviour
 
     public void toggleFlying()
     {
-        if (flying = false)
+        if (flying == false)
             flying = true;
         else
             flying = false;
