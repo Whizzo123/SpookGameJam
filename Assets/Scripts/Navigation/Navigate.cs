@@ -1,23 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.XR.WSA.Input;
 
 public class Navigate : MonoBehaviour
 {
-    public GameObject targetPos;
-    NavMeshAgent agent;
+    public GameObject heavenGateTargetPos;
+    private NavMeshAgent agent;
+    public GameObject hellGateTargetPos;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(targetPos.transform.position);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        agent.SetDestination(heavenGateTargetPos.transform.position);
     }
 }

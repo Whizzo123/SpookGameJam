@@ -13,7 +13,7 @@ public class BuildManager : MonoBehaviour
     public Dictionary<string, float> towerNameToTowerCost;
     public TextMeshProUGUI playerMoneyText;
     private float playerMoney;
-    private float PlayerMoney 
+    public float PlayerMoney 
     { 
         get 
         {
@@ -43,7 +43,7 @@ public class BuildManager : MonoBehaviour
         for (int i = 0; i < towers.Length; i++)
         {
             towerPrefabRegistry[towers[i].name] = towers[i];
-            towerNameToTowerCost[towers[i].name] = 5f;
+            towerNameToTowerCost[towers[i].name] = towers[i].GetComponent<Tower>().towerCost;
         }
     }
 

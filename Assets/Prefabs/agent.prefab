@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18eb28f834205cf428efc9d7a94e3896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPos: {fileID: 0}
+  heavenGateTargetPos: {fileID: 0}
+  hellGateTargetPos: {fileID: 0}
 --- !u!54 &4769095181067476413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,3 +169,4 @@ MonoBehaviour:
   flying: 0
   inHell: 0
   hellSpawnLocation: {fileID: 0}
+  creditsOnDeath: 2

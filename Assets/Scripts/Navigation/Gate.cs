@@ -25,6 +25,8 @@ public class Gate : MonoBehaviour
         NavMeshAgent agent = enemyGO.GetComponent<NavMeshAgent>();
         agent.Warp(spawnLocationOnReachingGate.transform.position);
         agent.SetDestination(newGateToMoveTowards.transform.position);
+        if (enemyGO.GetComponent<enemy>().inHell)
+            enemyGO.GetComponent<enemy>().inHell = false;
     }
 
     public void KillEnemyAndDamagePlayer(GameObject enemyGO)
