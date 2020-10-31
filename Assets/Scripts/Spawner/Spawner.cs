@@ -71,7 +71,6 @@ public class Spawner : MonoBehaviour
                     if (waveIndex < waveTemplate.patrols.Length)
                     {
                         PatrolTemplate patrol = waveTemplate.patrols[waveIndex];
-                        Debug.Log("WaveTemplate patrols length: " + waveTemplate.patrols.Length);
                         if (patrolIndex < patrol.members.Length)
                         {
                             PatrolMember member = patrol.members[patrolIndex];
@@ -101,13 +100,11 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Spawn cooldown timer:  " + spawnCooldownTimer);
                     spawnCooldownTimer -= Time.deltaTime;
                 }
             }
             else
             {
-                Debug.Log("Patrol cooldown timer: " + patrolCooldownTimer);
                 patrolCooldownTimer -= Time.deltaTime;
             }
         }
