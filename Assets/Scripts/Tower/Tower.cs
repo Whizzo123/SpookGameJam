@@ -22,7 +22,7 @@ public class Tower : MonoBehaviour
 
     #region EnemyGrabs
     [Header("Enemy")]
-    protected Transform target;
+    protected GameObject target;
     protected string enemyTag = "Enemy";
     [Space]
     #endregion
@@ -113,7 +113,7 @@ public class Tower : MonoBehaviour
             //if the nearest enemy is still alive and it's in range, set it as target
             if (nearestEnemy != null && shortesDistance <= towerRange)
             {
-                target = nearestEnemy.transform;
+                target = nearestEnemy;
             }
             else
             {

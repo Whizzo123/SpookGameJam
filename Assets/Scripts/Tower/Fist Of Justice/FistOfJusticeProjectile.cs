@@ -5,10 +5,10 @@ using UnityEngine;
 public class FistOfJusticeProjectile : MonoBehaviour
 {
 
-    private Transform target;
-    public float projectileSpeed = 70f;
+    private GameObject target;
+    public float projectileSpeed = 100f;
     public GameObject impactEffect;
-    public void Seek (Transform _target)
+    public void Seek (GameObject _target)
     {
         target = _target;
     }
@@ -23,7 +23,7 @@ public class FistOfJusticeProjectile : MonoBehaviour
             return;
         }
 
-        Vector3 dir = target.position - transform.position;//Vector 3 from ball to target
+        Vector3 dir = target.transform.position - transform.position;//Vector 3 from ball to target
         float distanceThisFrame = projectileSpeed * Time.deltaTime;
         
         //If magnitude of vector 3 is smaller than the estimated time to reach ball, call hit and don't move
@@ -39,6 +39,7 @@ public class FistOfJusticeProjectile : MonoBehaviour
     void HitTarget()
     {
         //Damage Target in here
+        target.GetComponent<enemy>().SetHealth(-1);
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);//Particle Effects
         Destroy(effectIns, 2);
         Destroy(this.gameObject);

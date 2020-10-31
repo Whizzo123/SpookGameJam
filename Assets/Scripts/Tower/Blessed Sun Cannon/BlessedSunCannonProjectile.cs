@@ -5,15 +5,15 @@ using UnityEngine;
 public class BlessedSunCannonProjectile : MonoBehaviour
 {
 
-    private Transform target;
+    private GameObject target;
     public float projectileSpeed;
     public GameObject impactEffect;
     public Vector3 setPos;
     public float splashRange = 10f;
-    public void Seek(Transform _target)
+    public void Seek(GameObject _target)
     {
         target = _target;
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         setPos = dir;
         FireCannonAtPoint(dir);
     }
