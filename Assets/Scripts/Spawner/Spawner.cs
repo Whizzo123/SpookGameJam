@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
     private bool spawning;
     public GameObject targetGate;
     public List<GameObject> enemiesInWave;
+    public GameObject hellSpawnGameObject;
+
 
     private int waveIndex;
     private int patrolIndex;
@@ -91,6 +93,7 @@ public class Spawner : MonoBehaviour
     {
         GameObject go = (GameObject)Instantiate(enemyTemplate, spawnPos.transform.position, Quaternion.identity);
         go.GetComponent<Navigate>().targetPos = targetGate;
+        go.GetComponent<enemy>().hellSpawnLocation = hellSpawnGameObject;
         enemiesInWave.Add(go);
         enemyCountInWave++;
     }
