@@ -1,17 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
 
-
+    public TextMeshProUGUI waveText;
     public int waveNumber;
+    public int WaveNumber
+    {
+        get
+        {
+            return waveNumber;
+        }
+        set
+        {
+            waveNumber = value;
+            waveText.text = "Wave: " + waveNumber;
+        }
+    }
     public WaveTemplate[] waveTemplates;
     public float spawnCooldown;
     private float spawnCooldownTimer;
     public float patrolCooldown;
     private float patrolCooldownTimer;
+    public float waveCooldown;
+    private float waveCooldownTimer;
     public GameObject spawnPos;
     private int enemyCountInWave;
     private bool spawning;
@@ -27,65 +42,86 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         waveNumber = 0;
-
-        StartWave();
+        WaveNumber = waveNumber;
     }
 
     public void StartWave()
     {
-        spawnCooldownTimer = 0;
-        spawning = true;
-        waveIndex = 0;
-        patrolIndex = 0;
-        memberIndex = 0;
+        if (spawning == false)
+        {
+            WaveNumber += 1;
+            spawnCooldownTimer = 0;
+            spawning = true;
+            waveIndex = 0;
+            patrolIndex = 0;
+            memberIndex = 0;
+        }
     }
 
     void Update()
     {
-        if (patrolCooldownTimer < 0)
+        if (spawning)
         {
-            if (spawnCooldownTimer <= 0)
+            if (patrolCooldownTimer < 0)
             {
-                spawnCooldownTimer = spawnCooldown;
-                WaveTemplate waveTemplate = waveTemplates[waveNumber];
-                if (waveIndex < waveTemplate.patrols.Length)
+                if (spawnCooldownTimer <= 0)
                 {
-                    PatrolTemplate patrol = waveTemplate.patrols[waveIndex];
-                    Debug.Log("WaveTemplate patrols length: " +  waveTemplate.patrols.Length);
-                    if (patrolIndex < patrol.members.Length)
+                    spawnCooldownTimer = spawnCooldown;
+                    WaveTemplate waveTemplate = waveTemplates[waveNumber - 1];
+                    if (waveIndex < waveTemplate.patrols.Length)
                     {
-                        PatrolMember member = patrol.members[patrolIndex];
-                        if (memberIndex < member.numberToSpawn)
+                        PatrolTemplate patrol = waveTemplate.patrols[waveIndex];
+                        Debug.Log("WaveTemplate patrols length: " + waveTemplate.patrols.Length);
+                        if (patrolIndex < patrol.members.Length)
                         {
-                            SpawnEnemy(member.enemyTemplate);
-                            memberIndex++;
+                            PatrolMember member = patrol.members[patrolIndex];
+                            if (memberIndex < member.numberToSpawn)
+                            {
+                                SpawnEnemy(member.enemyTemplate);
+                                memberIndex++;
+                            }
+                            else
+                            {
+                                memberIndex = 0;
+                                patrolIndex++;
+                            }
                         }
                         else
                         {
-                            memberIndex = 0;
-                            patrolIndex++;
+                            patrolCooldownTimer = patrolCooldown;
+                            patrolIndex = 0;
+                            waveIndex++;
                         }
                     }
                     else
                     {
-                        patrolCooldownTimer = patrolCooldown;
-                        patrolIndex = 0;
-                        waveIndex++;
+                        waveIndex = 0;
+                        spawning = false;
                     }
+                }
+                else
+                {
+                    Debug.Log("Spawn cooldown timer:  " + spawnCooldownTimer);
+                    spawnCooldownTimer -= Time.deltaTime;
                 }
             }
             else
             {
-                Debug.Log("Spawn cooldown timer:  " + spawnCooldownTimer);
-                spawnCooldownTimer -= Time.deltaTime;
+                Debug.Log("Patrol cooldown timer: " + patrolCooldownTimer);
+                patrolCooldownTimer -= Time.deltaTime;
             }
         }
         else
         {
-            Debug.Log("Patrol cooldown timer: " + patrolCooldownTimer);
-            patrolCooldownTimer -= Time.deltaTime;
+            if(enemyCountInWave == 0)
+            {
+                waveCooldownTimer -= Time.deltaTime;
+                if(waveCooldownTimer <= 0)
+                {
+                    StartWave();
+                }
+            }
         }
-        
         
     }
 
@@ -104,11 +140,12 @@ public class Spawner : MonoBehaviour
         if(enemyCountInWave == 0)
         {
             //Wave over
-            waveNumber++;
+            waveCooldownTimer = waveCooldown;
         }
     }
 }
 
+#region 
 [System.Serializable]
 
 public struct PatrolTemplate
@@ -127,3 +164,4 @@ public struct WaveTemplate
 {
     public PatrolTemplate[] patrols;
 }
+#endregion

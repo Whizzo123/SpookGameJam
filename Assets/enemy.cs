@@ -11,6 +11,8 @@ public class enemy : MonoBehaviour
 
     public float enemyHealth ;
 
+    public int enemyDamage;
+
     public bool flying = false;
 
     public bool inHell = false;
@@ -34,6 +36,7 @@ public class enemy : MonoBehaviour
         {
             if (inHell == true) 
             {
+                FindObjectOfType<Spawner>().EnemyHasBeenKilled();
                 Destroy(this.gameObject);
             }
             else

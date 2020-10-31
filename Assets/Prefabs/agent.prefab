@@ -162,7 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478eac39e592aa44eb1c3150ed0195d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 10
-  enemyHealth: 10
+  enemySpeed: 2
+  enemyHealth: 2
+  enemyDamage: 1
   flying: 0
   inHell: 0
+  hellSpawnLocation: {fileID: 0}
