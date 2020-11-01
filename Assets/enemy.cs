@@ -25,6 +25,8 @@ public class enemy : MonoBehaviour
 
     public bool haveHolyWaterModifierApplied;
 
+    private Animator animator;
+
     void Start()
     {
         GetComponent<NavMeshAgent>().speed = enemySpeed;
@@ -32,11 +34,25 @@ public class enemy : MonoBehaviour
         inHell = false;
         haveHolyWaterModifierApplied = false;
         originalEnemyHealth = enemyHealth;
+        animator = GetComponent<Animator>();
     }
 
     public void SetSpeed(float enemySpeedChange)
     {
         enemySpeed = enemySpeed + enemySpeedChange;
+    }
+
+    void Update()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Dying") && animator.GetBool("IsDead") == true)
+        {
+            AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
+            if(info.normalizedTime > 1f)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
     }
    
     public void SetHealth(float enemyHealthChange)
@@ -51,7 +67,8 @@ public class enemy : MonoBehaviour
             if (inHell == true) 
             {
                 FindObjectOfType<Spawner>().EnemyHasBeenKilled();
-                Destroy(this.gameObject);
+                animator.SetBool("IsDead", true);
+                GetComponent<NavMeshAgent>().SetDestination(this.transform.position);
             }
             else
             {

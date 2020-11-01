@@ -127,7 +127,10 @@ public class Spawner : MonoBehaviour
         if (enemyCountInWave <= 0 && spawning != true && (waveNumber) >= waves.Length)
         {
             //Win scenario put win screen loading in here
-            FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
+            if (FindObjectOfType<LevelManager>() == null)
+                Debug.LogWarning("In dev mode");
+            else
+                FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("WinLevelScreen");
         }
         

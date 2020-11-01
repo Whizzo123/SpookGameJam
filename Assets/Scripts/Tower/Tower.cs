@@ -89,7 +89,7 @@ public class Tower : MonoBehaviour
     }
     */
     #endregion
-    InvokeRepeating("UpdateTarget", 0f, 0.5f);
+    InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
     
         void UpdateTarget()
