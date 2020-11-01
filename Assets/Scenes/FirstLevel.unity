@@ -1993,6 +1993,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3734465621187039902, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
+      propertyPath: waves.Array.data[1].patrols.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734465621187039902, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
+      propertyPath: waves.Array.data[1].patrols.Array.data[1].patrolComposition.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734465621187039902, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
       propertyPath: waveText
       value: 
       objectReference: {fileID: 1726716469}
@@ -2012,6 +2020,14 @@ PrefabInstance:
       propertyPath: hellGate
       value: 
       objectReference: {fileID: 179433278}
+    - target: {fileID: 3734465621187039902, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
+      propertyPath: waves.Array.data[1].patrols.Array.data[1].patrolComposition.Array.data[0].enemyTemplate
+      value: 
+      objectReference: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+    - target: {fileID: 3734465621187039902, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
+      propertyPath: waves.Array.data[1].patrols.Array.data[1].patrolComposition.Array.data[0].numberToSpawn
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3734465621187039903, guid: b676f08623485aa4da4e3dbc2384da53, type: 3}
       propertyPath: m_Name
       value: Spawner
