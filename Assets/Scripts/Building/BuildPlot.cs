@@ -8,9 +8,13 @@ public class BuildPlot : MonoBehaviour
     public Material materialToSwitchToWhenSelected;
     public Material materialToSwitchToWhenBlocked;
     public Material defaultMaterial;
+    public SkinnedMeshRenderer rendererToEffectPegs;
+    public SkinnedMeshRenderer rendererToEffectSign;
     public GameObject buildPosition;
     public GameObject builtGO;
     private bool blocked;
+    public Animator animator;
+    public GameObject buildPlotModel;
     public bool PlotBlocked
     {
         get
@@ -22,29 +26,45 @@ public class BuildPlot : MonoBehaviour
             blocked = value;
             if(value)
             {
-                GetComponent<MeshRenderer>().material = materialToSwitchToWhenBlocked;
+                SwapMaterials(materialToSwitchToWhenBlocked);
             }
             else
             {
-                GetComponent<MeshRenderer>().material = defaultMaterial;
+                SwapMaterials(defaultMaterial);
             }
         }
     }
     public string builtGOPrefabName;
     public BuildPlot twinBuildPlot;
 
-
+    void Update()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|Switch"))
+        {
+            AnimatorStateInfo info = animator.GetCurrentAnimatorStateInfo(0);
+            if (info.normalizedTime > 1f)
+            {
+                animator.SetBool("switchFinished", true);
+            }
+        }
+    }
 
     public void ClickedOn()
     {
         if (PlotBlocked == false)
-            GetComponent<MeshRenderer>().material = materialToSwitchToWhenSelected;
+        {
+            SwapMaterials(materialToSwitchToWhenSelected);
+            animator.SetTrigger("Selected");
+        }
     }
 
     public void ClickedOff()
     {
-        if(PlotBlocked == false)
-            GetComponent<MeshRenderer>().material = defaultMaterial;
+        if (PlotBlocked == false)
+        {
+            SwapMaterials(defaultMaterial);
+            animator.SetTrigger("Selected");
+        }
     }
 
 
@@ -53,6 +73,7 @@ public class BuildPlot : MonoBehaviour
     {
         builtGOPrefabName = towerGO.name;
         builtGO = (GameObject)Instantiate(towerGO, buildPosition.transform.position, Quaternion.identity);
+        TogglePlots();
         if(twinBuildPlot != null)
             twinBuildPlot.PlotBlocked = true;
     }
@@ -65,7 +86,23 @@ public class BuildPlot : MonoBehaviour
                 twinBuildPlot.PlotBlocked = false;
             Destroy(builtGO);
             builtGO = null;
+            TogglePlots();
         }
         
+    }
+
+    private void SwapMaterials(Material material)
+    {
+        Material[] pegMaterials = rendererToEffectPegs.materials;
+        pegMaterials[0] = material;
+        Material[] signMaterials = rendererToEffectSign.materials;
+        signMaterials[0] = material;
+        rendererToEffectPegs.materials = pegMaterials;
+        rendererToEffectSign.materials = signMaterials;
+    }
+
+    private void TogglePlots()
+    {
+        buildPlotModel.SetActive(!buildPlotModel.activeSelf);
     }
 }

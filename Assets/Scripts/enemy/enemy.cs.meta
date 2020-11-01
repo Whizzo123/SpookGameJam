@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 478eac39e592aa44eb1c3150ed0195d7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - hellSpawnLocation: {instanceID: 0}
+  - impactEffect: {fileID: 5732410342013808536, guid: ba71184160700d445a12795a86ded21e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

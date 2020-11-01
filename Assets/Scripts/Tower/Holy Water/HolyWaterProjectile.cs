@@ -8,11 +8,11 @@ public class HolyWaterProjectile : MonoBehaviour
 
     private Vector3 target;
     public float projectileSpeed;
-    public GameObject impactEffect;
+    //public GameObject impactEffect;
     public Vector3 setPos;
-    public float splashRange = 10f;
-    public float damage;
-    public float towerRange;
+    public float splashRange = 3f;
+    public float damage = 0;
+    public float towerRange = 4;
 
     public void Seek(Vector3 _target)
     {
@@ -64,8 +64,8 @@ public class HolyWaterProjectile : MonoBehaviour
         }
 
         //Effects and destroy ball
-        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2);
+        //GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        //Destroy(effectIns, 2);
         Destroy(this.gameObject);
     }
 

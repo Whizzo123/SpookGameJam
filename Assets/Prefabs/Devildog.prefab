@@ -917,6 +917,7 @@ MonoBehaviour:
   hellSpawnLocation: {fileID: 0}
   creditsOnDeath: 1
   haveHolyWaterModifierApplied: 0
+  impactEffect: {fileID: 5732410342013808536, guid: ba71184160700d445a12795a86ded21e, type: 3}
 --- !u!114 &3641009158397203125
 MonoBehaviour:
   m_ObjectHideFlags: 0
