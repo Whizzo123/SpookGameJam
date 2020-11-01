@@ -10,8 +10,8 @@ public class BlessedSunCannonProjectile : MonoBehaviour
     public GameObject impactEffect;
     public Vector3 setPos;
     public float splashRange = 10f;
-    public float damage;
-    public float towerRange;
+    public float damage = 1f;
+    public float towerRange = 4f;
 
     public void Seek(Vector3 _target)
     {
