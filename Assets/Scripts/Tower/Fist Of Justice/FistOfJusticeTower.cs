@@ -33,7 +33,7 @@ public class FistOfJusticeTower : Tower
     {
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         FistOfJusticeProjectile projectile = projectileGO.GetComponent<FistOfJusticeProjectile>();
-
+        projectile.damage = towerDamage;
         if (projectile != null)
         {
             projectile.Seek(target);

@@ -9,6 +9,7 @@ public class FistOfJusticeProjectile : MonoBehaviour
     private GameObject targetGO;
     public float projectileSpeed = 30f;
     public GameObject impactEffect;
+    public float damage;
     public void Seek (GameObject _target)
     {
         targetGO = _target;
@@ -42,7 +43,8 @@ public class FistOfJusticeProjectile : MonoBehaviour
         //Damage Target in here
         if (targetGO != null)
         {
-            targetGO.GetComponent<enemy>().SetHealth(-1);
+
+            targetGO.GetComponent<enemy>().SetHealth(-damage);
         }
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);//Particle Effects
         Destroy(effectIns, 2);
