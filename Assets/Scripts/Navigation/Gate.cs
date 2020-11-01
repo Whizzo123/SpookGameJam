@@ -22,6 +22,7 @@ public class Gate : MonoBehaviour
 
     public void SendEnemyToNextDimension(GameObject enemyGO)
     {
+        enemyGO.GetComponent<enemy>().DoubleHealth();
         NavMeshAgent agent = enemyGO.GetComponent<NavMeshAgent>();
         agent.Warp(spawnLocationOnReachingGate.transform.position);
         agent.SetDestination(newGateToMoveTowards.transform.position);
