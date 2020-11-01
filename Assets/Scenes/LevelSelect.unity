@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64414761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960293481}
+        m_TargetAssemblyTypeName: NewLevelSelect, Assembly-CSharp
+        m_MethodName: LoadLevel3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64414761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636885182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960293481}
+        m_TargetAssemblyTypeName: NewLevelSelect, Assembly-CSharp
+        m_MethodName: LoadLevel2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636885182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 669752412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960293481}
+        m_TargetAssemblyTypeName: NewLevelSelect, Assembly-CSharp
+        m_MethodName: LoadLevel5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669752412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +893,7 @@ GameObject:
   - component: {fileID: 960293479}
   - component: {fileID: 960293478}
   - component: {fileID: 960293477}
+  - component: {fileID: 960293481}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -946,6 +983,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &960293481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960293476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83997c1c1cf42eb48a57267d8b33043b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &966848410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308824538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960293481}
+        m_TargetAssemblyTypeName: NewLevelSelect, Assembly-CSharp
+        m_MethodName: LoadLevel4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308824538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1364578196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960293481}
+        m_TargetAssemblyTypeName: NewLevelSelect, Assembly-CSharp
+        m_MethodName: LoadLevel1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1364578196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,7 +1541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1394041713}
   - component: {fileID: 1394041714}
-  - component: {fileID: 1394041715}
   m_Layer: 5
   m_Name: Levels
   m_TagString: Untagged
@@ -1524,24 +1596,6 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
---- !u!114 &1394041715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394041712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65dfd0044384ab4894467bc29ba505e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelButtons:
-  - {fileID: 1364578195}
-  - {fileID: 636885181}
-  - {fileID: 64414760}
-  - {fileID: 1308824537}
-  - {fileID: 669752411}
 --- !u!1 &1659725971
 GameObject:
   m_ObjectHideFlags: 0

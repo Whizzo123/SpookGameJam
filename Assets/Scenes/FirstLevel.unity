@@ -2500,6 +2500,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1726716467}
+    - target: {fileID: 5417457657137965175, guid: 76087a801656a8a43a9282e0756bf8a2, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76087a801656a8a43a9282e0756bf8a2, type: 3}
 --- !u!1001 &6475566748651510389
