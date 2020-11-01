@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
-
     public TextMeshProUGUI waveText;
     public int waveNumber;
     public int WaveNumber
@@ -155,6 +154,8 @@ public class Spawner : MonoBehaviour
             waveCooldownTimer = waveCooldown;
         }
     }
+
+ 
 }
 
 #region 
