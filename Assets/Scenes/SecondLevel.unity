@@ -1100,6 +1100,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 653791350987147220, guid: 767ca69a583d9444c9e62c73ebad6c86, type: 3}
   m_PrefabInstance: {fileID: 604964517}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &657741088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8680055325849470769, guid: 197214f17116ccc44a680327e3a0f277, type: 3}
+  m_PrefabInstance: {fileID: 2069327848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f584b9d80afd45902bda0db7011e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &684863093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,6 +1133,14 @@ PrefabInstance:
     - target: {fileID: 947014626, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTowerToBuild
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129003429102782618, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 657741088}
+    - target: {fileID: 2129003429102782618, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartWave
       objectReference: {fileID: 0}
     - target: {fileID: 2129003429294976706, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
       propertyPath: m_Name
