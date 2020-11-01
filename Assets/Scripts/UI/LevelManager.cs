@@ -62,4 +62,9 @@ public class LevelManager : MonoBehaviour
     {
        SceneManager.LoadScene("StartScreen");
     }
+
+    public void GoToHowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 }

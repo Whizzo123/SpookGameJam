@@ -13,4 +13,9 @@ public class GoToMenu : MonoBehaviour
     {
         FindObjectOfType<LevelManager>().RetryCurrentLevel();
     }
+
+    public void HowToPlay()
+    {
+        FindObjectOfType<LevelManager>().GoToHowToPlay();
+    }
 }
