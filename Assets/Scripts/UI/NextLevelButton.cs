@@ -10,7 +10,7 @@ public class NextLevelButton : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(new UnityEngine.Events.UnityAction(CallLevelManager));
     }
 
-    void CallLevelManager()
+    public void CallLevelManager()
     {
         if (FindObjectOfType<LevelManager>() != null)
         {
