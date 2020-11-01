@@ -66,7 +66,7 @@ public class enemy : MonoBehaviour
         enemyHealth = enemyHealth + enemyHealthChange;
         if(enemyHealth <= 0)
         {
-            if (inHell == true) 
+            if (inHell == true && animator.GetBool("IsDead") == false) 
             {
                 GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
                 Destroy(effectIns, 2);
@@ -76,7 +76,7 @@ public class enemy : MonoBehaviour
                 GetComponent<NavMeshAgent>().SetDestination(this.transform.position);
                 
             }
-            else
+            else if(inHell == false)
             {
                 GetComponent<NavMeshAgent>().Warp(hellSpawnLocation.transform.position);
                 GetComponent<NavMeshAgent>().SetDestination(GetComponent<Navigate>().hellGateTargetPos.transform.position);
