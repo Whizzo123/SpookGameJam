@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerCost: 5
-  towerRate: 0.5
+  towerRate: 0.25
   towerDamage: 5
   towerRange: 6
   projectilePrefab: {fileID: 8801389098057254384, guid: 8e018ec00ede76d4f8c439c26e6f9769, type: 3}
