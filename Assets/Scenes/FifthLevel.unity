@@ -1618,6 +1618,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTowerToBuild
       objectReference: {fileID: 0}
+    - target: {fileID: 2129003429033133912, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 322178196}
+    - target: {fileID: 2129003429033133912, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RemoveTowerOnPlot
+      objectReference: {fileID: 0}
     - target: {fileID: 2129003429102782618, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
