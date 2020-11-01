@@ -12,7 +12,14 @@ public class NextLevelButton : MonoBehaviour
 
     void CallLevelManager()
     {
-        FindObjectOfType<LevelManager>().MoveToNextLevel();
+        if (FindObjectOfType<LevelManager>() != null)
+        {
+            FindObjectOfType<LevelManager>().MoveToNextLevel();
+        }
+        else
+        {
+            Debug.LogWarning("Youre in dev mode");
+        }
     }
 
 }

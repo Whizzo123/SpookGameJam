@@ -21,4 +21,8 @@ public class StartScreenManager : MonoBehaviour
         Application.Quit(0);
     }
 
+    public void HowToPlayGT()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
 }
