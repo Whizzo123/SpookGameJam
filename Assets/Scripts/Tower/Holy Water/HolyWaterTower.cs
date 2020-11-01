@@ -15,9 +15,9 @@ public class HolyWaterTower : Tower
         Vector3 dir = target.transform.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = lookRotation.eulerAngles;
-        towerRotate.rotation = Quaternion.Euler(0f, rotation.y - 180, 0);
+        towerRotate.rotation = Quaternion.Euler(-89.98f, rotation.y, 0);
 
-        if(towerCountdown <= 0f)
+        if (towerCountdown <= 0f)
         {
             Shoot();
             towerCountdown = 1f / towerRate;

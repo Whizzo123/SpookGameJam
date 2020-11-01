@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
     public float waveCooldown;
     private float waveCooldownTimer;
     public GameObject spawnPos;
-    private int enemyCountInWave;
+    public int enemyCountInWave;
     private bool spawning;
     public GameObject targetGate;
     public List<GameObject> enemiesInWave;
