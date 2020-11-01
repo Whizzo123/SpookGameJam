@@ -277,9 +277,9 @@ GameObject:
   - component: {fileID: 8086441110749294838}
   - component: {fileID: 4165347409770185488}
   - component: {fileID: 4865647820941593711}
-  - component: {fileID: 5574291069507809957}
   - component: {fileID: -2045365034418644188}
   - component: {fileID: 1850233261}
+  - component: {fileID: -8107267862607920618}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Enemy
@@ -366,19 +366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heavenGateTargetPos: {fileID: 0}
   hellGateTargetPos: {fileID: 0}
---- !u!65 &5574291069507809957
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181137316324602725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-2045365034418644188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -414,6 +401,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-8107267862607920618
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181137316324602725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1387256487685537392
 GameObject:
   m_ObjectHideFlags: 0

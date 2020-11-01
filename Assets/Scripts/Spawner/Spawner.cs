@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (spawning)
+        if (spawning & (waveNumber - 1) < waves.Length)
         {
             if (patrolCooldownTimer < 0)
             {
@@ -119,6 +119,11 @@ public class Spawner : MonoBehaviour
                     StartWave();
                 }
             }
+        }
+
+        if (enemyCountInWave <= 0 && spawning != true && (waveNumber - 1) >= waves.Length)
+        {
+            //Win scenario put win screen loading in here
         }
         
     }
