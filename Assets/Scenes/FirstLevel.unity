@@ -2000,11 +2000,11 @@ MonoBehaviour:
       - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
         numberToSpawn: 3
     - patrolComposition:
-      - enemyTemplate: {fileID: 4769095181067476404, guid: bd728efea7ff6bf4eb4a9574b5ffdf55, type: 3}
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
         numberToSpawn: 7
   - patrols:
     - patrolComposition:
-      - enemyTemplate: {fileID: 4769095181067476404, guid: bd728efea7ff6bf4eb4a9574b5ffdf55, type: 3}
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
         numberToSpawn: 6
   spawnCooldown: 0.75
   patrolCooldown: 1

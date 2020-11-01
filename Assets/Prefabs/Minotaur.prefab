@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 4865647820941593711}
   - component: {fileID: -2045365034418644188}
   - component: {fileID: 1850233261}
-  - component: {fileID: -8107267862607920618}
+  - component: {fileID: 7951369673977227180}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Enemy
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478eac39e592aa44eb1c3150ed0195d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 2
-  enemyHealth: 2
+  enemySpeed: 1
+  enemyHealth: 15
   enemyDamage: 1
   flying: 0
   inHell: 0
@@ -401,20 +401,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &-8107267862607920618
-MeshCollider:
+--- !u!65 &7951369673977227180
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181137316324602725}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.946214, y: 6.727298, z: 1.9239624}
+  m_Center: {x: -0.09055562, y: 2.8636477, z: 0.46198094}
 --- !u!1 &1387256487685537392
 GameObject:
   m_ObjectHideFlags: 0
