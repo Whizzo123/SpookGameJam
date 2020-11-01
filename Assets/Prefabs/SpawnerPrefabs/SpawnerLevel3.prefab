@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8129594809602496182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8129594809602496168}
+  - component: {fileID: 8129594809602496183}
+  m_Layer: 0
+  m_Name: SpawnerLevel3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8129594809602496168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129594809602496182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 416, y: 193, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8129594809602496183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129594809602496182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f584b9d80afd45902bda0db7011e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveText: {fileID: 0}
+  waveNumber: 0
+  waves:
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 3
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 3
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 2
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 3
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 3
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 2
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 2
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 2
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 10
+  - patrols:
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 4441210130911356826, guid: 4ebc71c289c5a5d49898bacb45f7b288, type: 3}
+        numberToSpawn: 5
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 5
+    - patrolComposition:
+      - enemyTemplate: {fileID: 1181137316324602725, guid: 4976148b60343874692ab810752cab61, type: 3}
+        numberToSpawn: 5
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 2
+    - patrolComposition:
+      - enemyTemplate: {fileID: 173338462259518592, guid: 20f97894e594c5d439d2d372a9cef4cb, type: 3}
+        numberToSpawn: 10
+  spawnCooldown: 0.75
+  patrolCooldown: 1
+  waveCooldown: 1
+  spawnPos: {fileID: 0}
+  enemyCountInWave: 0
+  targetGate: {fileID: 0}
+  enemiesInWave: []
+  hellSpawnGameObject: {fileID: 0}
+  hellGate: {fileID: 0}
