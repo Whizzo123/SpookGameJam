@@ -34,7 +34,7 @@ public class HolyWaterTower : Tower
         projectile.towerRange = towerRange;
         if(projectile != null)
         {
-            projectile.Seek(target);
+            projectile.Seek(target.transform.position);
         }
     }
 

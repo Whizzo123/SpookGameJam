@@ -43,7 +43,14 @@ public class Player : MonoBehaviour
 
     private void GameOver()
     {
-        FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
+        if (FindObjectOfType<LevelManager>())
+        {
+            FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            Debug.LogWarning("LevelManager does not exist this okay if this is a test of only this level");
+        }
         SceneManager.LoadScene("GameOver");
     }
 

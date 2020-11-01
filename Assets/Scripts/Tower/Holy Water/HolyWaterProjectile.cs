@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class HolyWaterProjectile : MonoBehaviour
 {
 
-    private GameObject target;
+    private Vector3 target;
     public float projectileSpeed;
     public GameObject impactEffect;
     public Vector3 setPos;
@@ -14,11 +14,11 @@ public class HolyWaterProjectile : MonoBehaviour
     public float damage;
     public float towerRange;
 
-    public void Seek(GameObject _target)
+    public void Seek(Vector3 _target)
     {
         target = _target;
-        Vector3 dir = target.transform.position - transform.position;
-        setPos = target.transform.position;
+        Vector3 dir = target - transform.position;
+        setPos = target;
         FireCannonAtPoint(dir);
     }
 
@@ -33,7 +33,7 @@ public class HolyWaterProjectile : MonoBehaviour
 
         projectileSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
         float distanceThisFrame = projectileSpeed * Time.deltaTime;
-        if(dir.magnitude <= distanceThisFrame + .6f)
+        if(dir.magnitude <= distanceThisFrame + 1f)
         {
             HitTarget();
             return;

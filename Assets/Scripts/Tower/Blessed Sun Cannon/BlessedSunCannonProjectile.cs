@@ -5,18 +5,19 @@ using UnityEngine;
 public class BlessedSunCannonProjectile : MonoBehaviour
 {
 
-    private GameObject target;
+    private Vector3 target;
     public float projectileSpeed;
     public GameObject impactEffect;
     public Vector3 setPos;
     public float splashRange = 10f;
     public float damage;
     public float towerRange;
-    public void Seek(GameObject _target)
+
+    public void Seek(Vector3 _target)
     {
         target = _target;
-        Vector3 dir = target.transform.position - transform.position;
-        setPos = target.transform.position;
+        Vector3 dir = target - transform.position;
+        setPos = target;
         FireCannonAtPoint(dir);
     }
 
@@ -34,7 +35,8 @@ public class BlessedSunCannonProjectile : MonoBehaviour
 
         projectileSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
         float distanceThisFrame = projectileSpeed * Time.deltaTime;
-        if (dir.magnitude <= distanceThisFrame + .6f)
+        Debug.Log(dir.magnitude + "Dir Magnitude\\" + "distanceThisFrame: " + distanceThisFrame);
+        if (dir.magnitude <= distanceThisFrame + 1f)
         {
             HitTarget();
             return;
