@@ -30,6 +30,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void LoadLevelAtIndex(int index)
+    {
+        SceneManager.LoadScene(levels[index].name);
+    }
+
     public void RetryCurrentLevel()
     {
         SceneManager.LoadScene(currentLevel);
