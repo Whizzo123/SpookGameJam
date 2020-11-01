@@ -37,6 +37,7 @@ public class enemy : MonoBehaviour
         haveHolyWaterModifierApplied = false;
         originalEnemyHealth = enemyHealth;
         animator = GetComponent<Animator>();
+
     }
 
     public void SetSpeed(float enemySpeedChange)
@@ -86,6 +87,12 @@ public class enemy : MonoBehaviour
             }
         }
             
+    }
+
+    public void DoubleHealth()
+    {
+        originalEnemyHealth = originalEnemyHealth * 2;
+        enemyHealth = originalEnemyHealth;
     }
 
     public void ToggleFlying()
