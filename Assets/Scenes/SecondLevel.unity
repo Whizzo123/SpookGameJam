@@ -782,6 +782,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6372205387089627128, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
+      propertyPath: spawnLocationOnReachingGate
+      value: 
+      objectReference: {fileID: 145849042}
+    - target: {fileID: 6372205387089627128, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
+      propertyPath: newGateToMoveTowards
+      value: 
+      objectReference: {fileID: 816590593}
     - target: {fileID: 6372205387089627129, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.38
