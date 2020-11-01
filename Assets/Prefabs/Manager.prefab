@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7776394532592627639}
   - component: {fileID: 7776394532592627636}
+  - component: {fileID: 1539628916}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -46,3 +47,16 @@ MonoBehaviour:
   chosenTowerGOToBuild: {fileID: 0}
   plotChosen: {fileID: 0}
   playerMoneyText: {fileID: 0}
+--- !u!114 &1539628916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776394532592627637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c444c4b43e63434191a8a3e88520631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}

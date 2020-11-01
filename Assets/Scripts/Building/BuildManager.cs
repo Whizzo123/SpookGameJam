@@ -53,7 +53,7 @@ public class BuildManager : MonoBehaviour
         {
             int layerMask = 1 << 8;
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = FindObjectOfType<CameraManager>().myCamera.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow);
