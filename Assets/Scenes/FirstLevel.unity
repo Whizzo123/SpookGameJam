@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372205387089627129, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6372205387089627129, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2067,6 +2067,7 @@ MonoBehaviour:
   patrolCooldown: 1
   waveCooldown: 1
   spawnPos: {fileID: 1548943129}
+  enemyCountInWave: 0
   targetGate: {fileID: 1680351000}
   enemiesInWave: []
   hellSpawnGameObject: {fileID: 464462231}
@@ -2205,7 +2206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372205387089627129, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6372205387089627129, guid: 1afb88af93b132a4780ba650343f7699, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2330,7 +2331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2129003429294976707, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2129003429294976707, guid: 192cec7ae11ca654ca398ce5ee938864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
