@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Archive2/NavMeshTest.unity
+    path: 
     guid: be1050c004e85484c8f666c40d985e74
   - enabled: 1
     path: Assets/Scenes/StartScreen.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 82f24587045d3b2498f9f9fdb4a4c578
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 7b63d3dca9a565c4f82a5b1f3517991a
   m_configObjects: {}
