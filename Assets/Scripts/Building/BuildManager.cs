@@ -24,7 +24,7 @@ public class BuildManager : MonoBehaviour
             if (playerMoneyText != null) 
             {
                 playerMoney = value;
-                playerMoneyText.text = (playerMoney + " credits"); 
+                playerMoneyText.text = (playerMoney + " Halo's"); 
             } 
         } 
     }
