@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c444c4b43e63434191a8a3e88520631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  myCamera: {fileID: 0}
 --- !u!1 &1548943129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3866407459608564720, guid: 0eb6ff3fb3ce2404194f789f870d99f5, type: 3}
@@ -1622,7 +1622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9d54531475a19741b0178f14124cd66, type: 2}
+  - {fileID: 2100000, guid: eeecfa47e91256d46a21889073ce8aea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1725,7 +1725,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1e516e840eb36ff4abe63a3db63b0033, type: 2}
+  - {fileID: 2100000, guid: 501a10ebc0fdfc348b05599cd8a4c09d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
