@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerCost: 10
-  towerRate: 0.18
-  towerDamage: 2
+  towerRate: 0.12
+  towerDamage: 4
   towerRange: 6
   projectilePrefab: {fileID: 8801389098057254384, guid: 8e018ec00ede76d4f8c439c26e6f9769, type: 3}
   projectileSpawnPoint: {fileID: 8123072476678441681}
