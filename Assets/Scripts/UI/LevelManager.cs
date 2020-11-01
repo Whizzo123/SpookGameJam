@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-
+    
     public void MoveToNextLevel()
     {
         int index = FindIndexOfLevel(currentLevel);
@@ -58,4 +58,8 @@ public class LevelManager : MonoBehaviour
         currentLevel = levelName;
     }
 
+    public void GoToMainMenu()
+    {
+       SceneManager.LoadScene("StartScreen");
+    }
 }

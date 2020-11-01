@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: abf4490dd58d7874ea0e1593e2b1dd5a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Montebello
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 773f463d32840774b905daf269a05145, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
