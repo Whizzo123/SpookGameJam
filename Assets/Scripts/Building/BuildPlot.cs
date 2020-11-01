@@ -14,6 +14,7 @@ public class BuildPlot : MonoBehaviour
     public GameObject builtGO;
     private bool blocked;
     public Animator animator;
+    public GameObject buildPlotModel;
     public bool PlotBlocked
     {
         get
@@ -72,6 +73,7 @@ public class BuildPlot : MonoBehaviour
     {
         builtGOPrefabName = towerGO.name;
         builtGO = (GameObject)Instantiate(towerGO, buildPosition.transform.position, Quaternion.identity);
+        TogglePlots();
         if(twinBuildPlot != null)
             twinBuildPlot.PlotBlocked = true;
     }
@@ -84,6 +86,7 @@ public class BuildPlot : MonoBehaviour
                 twinBuildPlot.PlotBlocked = false;
             Destroy(builtGO);
             builtGO = null;
+            TogglePlots();
         }
         
     }
@@ -96,5 +99,10 @@ public class BuildPlot : MonoBehaviour
         signMaterials[0] = material;
         rendererToEffectPegs.materials = pegMaterials;
         rendererToEffectSign.materials = signMaterials;
+    }
+
+    private void TogglePlots()
+    {
+        buildPlotModel.SetActive(!buildPlotModel.activeSelf);
     }
 }
