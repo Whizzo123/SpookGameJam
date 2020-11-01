@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -50,12 +51,15 @@ public class Spawner : MonoBehaviour
     {
         if (spawning == false)
         {
-            WaveNumber += 1;
-            spawnCooldownTimer = 0;
-            spawning = true;
-            waveIndex = 0;
-            patrolIndex = 0;
-            memberIndex = 0;
+            if ((waveNumber) < waves.Length)
+            {
+                WaveNumber += 1;
+                spawnCooldownTimer = 0;
+                spawning = true;
+                waveIndex = 0;
+                patrolIndex = 0;
+                memberIndex = 0;
+            }
         }
     }
 
@@ -120,10 +124,11 @@ public class Spawner : MonoBehaviour
                 }
             }
         }
-
-        if (enemyCountInWave <= 0 && spawning != true && (waveNumber - 1) >= waves.Length)
+        if (enemyCountInWave <= 0 && spawning != true && (waveNumber) >= waves.Length)
         {
             //Win scenario put win screen loading in here
+            FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("WinLevelScreen");
         }
         
     }

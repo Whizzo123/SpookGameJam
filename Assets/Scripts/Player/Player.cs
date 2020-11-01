@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
 
     private void GameOver()
     {
+        FindObjectOfType<LevelManager>().SetCurrentLevel(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("GameOver");
     }
 
