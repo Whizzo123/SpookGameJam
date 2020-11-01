@@ -83,7 +83,7 @@ MonoBehaviour:
   enemySpeed: 2
   enemyHealth: 1
   enemyDamage: 1
-  flying: 1
+  flying: 0
   inHell: 0
   hellSpawnLocation: {fileID: 0}
   creditsOnDeath: 1
