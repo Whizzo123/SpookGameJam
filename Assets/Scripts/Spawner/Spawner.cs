@@ -135,7 +135,7 @@ public class Spawner : MonoBehaviour
 
     private void SpawnEnemy(GameObject enemyTemplate)
     {
-        GameObject go = (GameObject)Instantiate(enemyTemplate, spawnPos.transform.position, Quaternion.identity);
+        GameObject go = (GameObject)Instantiate(enemyTemplate, spawnPos.transform.position, spawnPos.transform.rotation);
         go.GetComponent<Navigate>().heavenGateTargetPos = targetGate;
         go.GetComponent<Navigate>().hellGateTargetPos = hellGate;
         go.GetComponent<enemy>().hellSpawnLocation = hellSpawnGameObject;
