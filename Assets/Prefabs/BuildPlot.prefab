@@ -67,6 +67,7 @@ MonoBehaviour:
   buildPosition: {fileID: 653791351480675845}
   builtGO: {fileID: 0}
   animator: {fileID: 1121590421}
+  buildPlotModel: {fileID: 7022706451629799137}
   builtGOPrefabName: 
   twinBuildPlot: {fileID: 0}
 --- !u!1 &653791351480675845
