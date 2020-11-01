@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 30
-  impactEffect: {fileID: 5732410342013808536, guid: ba71184160700d445a12795a86ded21e, type: 3}
+  impactEffect: {fileID: 6467878406936412369, guid: b51cd54db9219cb43b251dd1bd7571f7, type: 3}
   setPos: {x: 0, y: 0, z: 0}
   splashRange: 5
+  damage: 0
+  towerRange: 0
 --- !u!54 &322489311004145951
 Rigidbody:
   m_ObjectHideFlags: 0

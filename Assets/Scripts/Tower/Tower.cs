@@ -41,54 +41,6 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    #region GetObject
-    /*
-    if (this.gameObject.tag == "Fist Of Justice")
-    {
-        towerCost = 5;
-        towerRate = 10;
-        towerDamage = 5;
-        towerRange = 5;
-        towerEffect = "None";
-        towerProjectile = "Direct";
-    } else if (this.gameObject.tag == "Blessed Sun Cannons")
-    {
-        towerCost = 5;
-        towerRate = 10;
-        towerDamage = 5;
-        towerRange = 5;
-        towerEffect = "None";
-        towerProjectile = "Splash";
-    }
-    else if (this.gameObject.tag == "Cursed Sundial")
-    {
-        towerCost = 5;
-        towerRate = 10;
-        towerDamage = 5;
-        towerRange = 5;
-        towerEffect = "Slow";
-        towerProjectile = "Splash";
-    }
-    else if (this.gameObject.tag == "Holy Water")
-    {
-        towerCost = 5;
-        towerRate = 10;
-        towerDamage = 5;
-        towerRange = 5;
-        towerEffect = "Vulnerability";
-        towerProjectile = "Splash";
-    }
-    else if (this.gameObject.tag == "Cupid Ballista")
-    {
-        towerCost = 5;
-        towerRate = 10;
-        towerDamage = 5;
-        towerRange = 5;
-        towerEffect = "None";
-        towerProjectile = "Direct";
-    }
-    */
-    #endregion
     InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
     
@@ -96,7 +48,7 @@ public class Tower : MonoBehaviour
         {
         //Finds all enemies with tag 'Enemy'
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-            float shortesDistance = Mathf.Infinity;
+            float shortesDistance = Mathf.Infinity;//didn't joe change this?///////////////////////////////////
             GameObject nearestEnemy = null;
 
         //for each enemy in enemies, it will find who is the closest and store that in nearest enemy

@@ -4,7 +4,12 @@ using System.Collections;
 
 public class HolyWaterTower : Tower
 {
-
+   /* public GameObject holyWaterEffect;
+    private void Start()
+    {
+        Instantiate(holyWaterEffect, transform.position, transform.rotation);
+    }
+   */
     void Update()
     {
         if(target == null)

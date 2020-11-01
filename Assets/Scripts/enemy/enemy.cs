@@ -27,6 +27,8 @@ public class enemy : MonoBehaviour
 
     private Animator animator;
 
+    public GameObject impactEffect;
+
     void Start()
     {
         GetComponent<NavMeshAgent>().speed = enemySpeed;
@@ -66,9 +68,13 @@ public class enemy : MonoBehaviour
         {
             if (inHell == true) 
             {
+                GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+                Destroy(effectIns, 2);
+
                 FindObjectOfType<Spawner>().EnemyHasBeenKilled();
                 animator.SetBool("IsDead", true);
                 GetComponent<NavMeshAgent>().SetDestination(this.transform.position);
+                
             }
             else
             {

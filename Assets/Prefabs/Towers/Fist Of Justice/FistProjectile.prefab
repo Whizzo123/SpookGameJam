@@ -95,4 +95,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 28.1
-  impactEffect: {fileID: 5732410342013808536, guid: ba71184160700d445a12795a86ded21e, type: 3}
+  impactEffect: {fileID: 8017346845206549194, guid: 02780ad2d16f68d4da56830da37f8a79, type: 3}
+  damage: 0
